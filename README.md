@@ -26,15 +26,6 @@ The project focuses on predicting sales for grocery stores in Ecuador. Retailers
 - **onpromotion**: Number of units of a product family that were promoted at a store on a given day.
 - **date**: The date of the observation.
 
-
-## Analysis Visualizations
-![image](https://github.com/user-attachments/assets/059854c7-239c-439e-9b9f-d227c8ab0120)
-![image](https://github.com/user-attachments/assets/a4300771-69d3-4a48-b31f-be90f29462fc)
-![image](https://github.com/user-attachments/assets/825738cf-9845-40cc-af15-94bcb686e676)
-
-# And more!
-
-
 ### External Influences
 
 - **Oil Prices**: As an oil-dependent country, fluctuations in oil prices significantly impact the Ecuadorian economy, affecting supermarket sales.
@@ -46,18 +37,37 @@ The project focuses on predicting sales for grocery stores in Ecuador. Retailers
 - Special attention should be given to transferred holidays and how they differ from the actual celebration days.
 - The 2016 earthquake is a notable event that affected supermarket sales, which could be used as a special feature in modeling.
 
-## Setup and Installation
+## Methodology
 
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/yourusername/sales-forecasting.git
-   cd sales-forecasting
-   ```
+### Data Preparation
 
-2. Install the necessary Python packages:
-   ```bash
-   pip install -r requirements.txt
-   ```
+- Loaded and merged datasets
+- Converted date fields to datetime format
+- Handled missing values, specifically in oil prices using forward-fill
+
+### Feature Engineering
+
+- Created time-based features (year, month, day, weekday, weekend)
+- Generated lag features and rolling averages to capture historical sales patterns
+- Computed percentage changes in oil prices
+
+### Data Splitting and Dimensionality Reduction
+
+- Split data into training and validation sets (80% training, 20% validation)
+- Applied Principal Component Analysis (PCA) to reduce feature dimensionality
+
+### Modeling
+
+- Trained predictive models:
+  - **Random Forest Regressor**
+  - **XGBoost Regressor**
+
+### Model Evaluation
+
+- Evaluated models using metrics:
+  - **Root Mean Squared Error (RMSE)**
+  - **R² (Coefficient of Determination)**
+  - **Mean Squared Logarithmic Error (MSLE)**
 
 ## Project Structure
 
@@ -73,7 +83,4 @@ The project focuses on predicting sales for grocery stores in Ecuador. Retailers
 - Scikit-learn (RandomForestRegressor, PCA)
 - XGBoost
 
-## Contributions
-
-Feel free to contribute by opening issues, submitting pull requests, or providing feedback and suggestions.
 
