@@ -2,13 +2,6 @@
 
 This repository contains a machine learning project to predict sales for thousands of product families sold at Favorita stores in Ecuador. The goal of this project is to apply time-series forecasting techniques to predict product sales based on historical data.
 
-## Analysis Visualizations
-![image](https://github.com/user-attachments/assets/059854c7-239c-439e-9b9f-d227c8ab0120)
-![image](https://github.com/user-attachments/assets/a4300771-69d3-4a48-b31f-be90f29462fc)
-![image](https://github.com/user-attachments/assets/825738cf-9845-40cc-af15-94bcb686e676)
-
-# And more!
-
 
 ## Dataset Overview
 
@@ -32,6 +25,15 @@ The project focuses on predicting sales for grocery stores in Ecuador. Retailers
 - **sales**: Total sales of a product family at a specific store on a specific date.
 - **onpromotion**: Number of units of a product family that were promoted at a store on a given day.
 - **date**: The date of the observation.
+
+
+## Analysis Visualizations
+![image](https://github.com/user-attachments/assets/059854c7-239c-439e-9b9f-d227c8ab0120)
+![image](https://github.com/user-attachments/assets/a4300771-69d3-4a48-b31f-be90f29462fc)
+![image](https://github.com/user-attachments/assets/825738cf-9845-40cc-af15-94bcb686e676)
+
+# And more!
+
 
 ### External Influences
 
