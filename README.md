@@ -2,6 +2,7 @@
 
 This repository contains a machine learning project to predict sales for thousands of product families sold at Favorita stores in Ecuador. The goal of this project is to apply time-series forecasting techniques to predict product sales based on historical data.
 
+
 ## Dataset Overview
 
 The project uses the following datasets:
@@ -36,9 +37,50 @@ The project focuses on predicting sales for grocery stores in Ecuador. Retailers
 - Special attention should be given to transferred holidays and how they differ from the actual celebration days.
 - The 2016 earthquake is a notable event that affected supermarket sales, which could be used as a special feature in modeling.
 
-## Setup and Installation
+## Methodology
 
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/yourusername/sales-forecasting.git
-   cd sales-forecasting
+### Data Preparation
+
+- Loaded and merged datasets
+- Converted date fields to datetime format
+- Handled missing values, specifically in oil prices using forward-fill
+
+### Feature Engineering
+
+- Created time-based features (year, month, day, weekday, weekend)
+- Generated lag features and rolling averages to capture historical sales patterns
+- Computed percentage changes in oil prices
+
+### Data Splitting and Dimensionality Reduction
+
+- Split data into training and validation sets (80% training, 20% validation)
+- Applied Principal Component Analysis (PCA) to reduce feature dimensionality
+
+### Modeling
+
+- Trained predictive models:
+  - **Random Forest Regressor**
+  - **XGBoost Regressor**
+
+### Model Evaluation
+
+- Evaluated models using metrics:
+  - **Root Mean Squared Error (RMSE)**
+  - **R² (Coefficient of Determination)**
+  - **Mean Squared Logarithmic Error (MSLE)**
+
+## Project Structure
+
+- `data/`: Contains datasets used in this project.
+- `notebooks/`: Includes Jupyter notebooks demonstrating data analysis, feature engineering, modeling, and evaluation.
+- `models/`: Stores serialized models.
+
+## Technologies Used
+
+- Python
+- Pandas
+- Matplotlib & Seaborn
+- Scikit-learn (RandomForestRegressor, PCA)
+- XGBoost
+
+
